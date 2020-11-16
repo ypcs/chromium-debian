@@ -1,3 +1,13 @@
+
+## Fetch sources
+
+ - look latest stable at https://chromereleases.googleblog.com/search/label/Stable%20updates
+ - update debian/changelog to use new version
+ - make -f debian/rules get-orig-source
+
+
+## Old
+
 List all of the flags that can be passed to gn
 
 $ ./out/Release/gn args --list out/Release

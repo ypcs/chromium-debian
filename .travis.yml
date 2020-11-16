@@ -5,6 +5,7 @@ services:
   - docker
 
 script:
+  - make -f debian/rules get-orig-source
   - wget -O- http://travis.debian.net/script.sh | sh -
 
 if:

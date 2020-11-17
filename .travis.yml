@@ -5,7 +5,7 @@ services:
   - docker
 
 install:
-  - sudo apt-get install build-essential packaging-dev devscripts --assume-yes
+  - sudo apt-get install build-essential packaging-dev devscripts equivs --assume-yes
 
 script:
   - make -f debian/rules get-orig-source

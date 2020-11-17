@@ -4,9 +4,13 @@ language: generic
 services:
   - docker
 
+install:
+  - sudo apt-get install build-essential packaging-dev devscripts --assume-yes
+
 script:
   - make -f debian/rules get-orig-source
-  - wget -O- http://travis.debian.net/script.sh | sh -
+  - mk-build-deps -i -r
+  - dpkg-buildpackage -us -uc
 
 if:
   tag IS blank
